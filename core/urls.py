@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from ecommerce import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('lista/', views.lista_pessoas, name='lista_pessoas'),
+    path('nova/', views.nova_pessoa, name='nova_pessoa')
 ]
