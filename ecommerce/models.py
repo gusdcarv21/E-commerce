@@ -5,6 +5,7 @@ class Pessoa(models.Model):
     email = models.EmailField()
     idade = models.IntegerField()
     telefone = models.CharField(max_length=14)
-
+    foto = models.ImageField()
+    senha = models.CharField(max_length=15)
 
 

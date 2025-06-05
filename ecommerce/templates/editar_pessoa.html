@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova pessoa</title>
+    <title>Editar pessoa</title>
 </head>
 <body>
-    <h1>cadastro</h1>
-    <form action="" method="post" enctype="multipart/form-data">
+    <h1>Editar Pessoa</h1>
+    <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Salvar</button>

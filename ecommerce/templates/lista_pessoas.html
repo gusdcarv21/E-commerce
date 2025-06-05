@@ -21,12 +21,15 @@
         <li>
             telefone = {{ pessoa.telefone }}
         </li>
+        <a href="{% url 'editar_pessoa' pessoa.id %}">editar pessoa</a>
+        <br>
+        <a href="{% url 'excluir_pessoa' pessoa.id %}">excluir pessoa</a>
         {% empty %}
         <li>Nenhuma pessoa encontrada</li>
         {% endfor %}
     </ul>
 
-    <a href="/nova">cadastrar-se já</a>
+    <a href="/nova">cadastrar cliente</a>
 
 </body>
 </html>

@@ -4,4 +4,6 @@ from .models import Pessoa
 class PessoaForm(forms.ModelForm):
     class Meta:
         model = Pessoa
-        fields = ['nome','email','idade','telefone']
+        fields = ['nome','email','idade','telefone', 'senha', 'foto',]
+
+

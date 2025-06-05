@@ -20,5 +20,9 @@ from ecommerce import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lista/', views.lista_pessoas, name='lista_pessoas'),
-    path('nova/', views.nova_pessoa, name='nova_pessoa')
+    path('nova/', views.nova_pessoa, name='nova_pessoa'),
+    path('editar/<int:id>/', views.editar_pessoa, name='editar_pessoa'),
+    path('excluir/<int:id>/', views.excluir_pessoa, name='excluir_pessoa'),
+    path('login/', views.login, name='login'),
+    path('', views.menu, name='menu'),
 ]
