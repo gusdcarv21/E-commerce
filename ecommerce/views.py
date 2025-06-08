@@ -39,5 +39,20 @@ def excluir_pessoa(request, id):
 
 
 def login(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
+        
+        try:
+            pessoa = Pessoa.objects.get(email=email)
+            if pessoa.senha == senha:
+                # Autenticação bem-sucedida
+                return redirect('menu')  # ou outra URL
+            else:
+                erro = 'Senha incorreta'
+        except Pessoa.DoesNotExist:
+            erro = 'Usuário não encontrado'
+
+        return render(request, 'login.html', {'erro': erro})
 
     return render(request, 'login.html')
